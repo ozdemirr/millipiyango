@@ -5,8 +5,13 @@ require_once 'CekilisTipEnum.php';
 
 $milliPiyango = new MilliPiyango();
 
-//son x hafta
-$sonuclar = $milliPiyango->cekilisSonucuGetir(CekilisTipEnum::SAYISAL_LOTO, 2);
+/**
+ * son x hafta
+ * $sonuc değişkeni, her haftanın sonucunun object olarak tutulduğu bir dizi olarak dönmektedir.
+ * İstenirse DB' ye kaydedilir, istenirse Cache' e atılabilir, yada aşağıdaki gibi basitçe listelenebilir.
+ * Çekiliş Tipini CekilisTipEnum' dan seçebilirsiniz.
+ */
+$sonuclar = $milliPiyango->cekilisSonucuGetir(CekilisTipEnum::SAYISAL_LOTO, 3);
 
 ?>
 
